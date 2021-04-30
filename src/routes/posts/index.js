@@ -6,7 +6,8 @@ export async function get(request) {
 		const dbConnection = await connectToDatabase();
 		const db = dbConnection.db;
 		const collection = db.collection('posts');
-		const posts = await collection.find().toArray();
+		const posts = await collection.find({}).toArray();
+		
 		return {
 			status: 200,
 			body: {
@@ -34,7 +35,7 @@ export async function post(request) {
 		return {
 			status: 200,
 			body: {
-				status:'Success'
+				status:'บันทึกสำเร็จจจจจจจ้าาาา🤣🤣'
 			}
 		};
 	} catch (error) {

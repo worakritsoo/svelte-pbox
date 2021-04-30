@@ -2,7 +2,7 @@
     
 	export async function load({ fetch }) {
 		const res = await fetch('/posts/*');
-        console.log(res);
+        console.log();
 		const jsonRes = await res.json();
 
 		return {
@@ -20,8 +20,8 @@
 
 
 
-{#if posts!==undefined}
-    {#each posts as post}
+
+{#each posts as post}
      <!-- content here -->
      <ion-card>
          <ion-card-header>
@@ -32,11 +32,7 @@
            {JSON.stringify(post.details)}
          </ion-card-content>
      </ion-card>
-    {/each}
-    {:else}
-     Post NO
-
-{/if}
+{/each}
 
 
 <style>
